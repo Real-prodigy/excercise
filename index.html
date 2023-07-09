@@ -13,7 +13,11 @@
     body{
       font-family:Arial, Helvetica, sans-serif ;
       background-color: rgb(202, 224, 235);
-      
+      min-height: 100vh; /* We make sure that body covers entirety of the screen so then we can center all elements on screen, we use min-height instead of height, so we dont have any responsiveness issues that would be caused by changed size of the screen  */
+      display: flex; /* There we set display of body to flexbox */
+      flex-direction: column; /* Sets direction of flexbox to column */
+      justify-content: center; /* Centering elements inside body on main axis */
+      align-items: center; /* Centering elements inside body on cross axis */
     }
      @media(max-width:400px){
      .main-div{
@@ -31,6 +35,7 @@
      body{
        font-family: Arial ;
        background-color: rgb(202, 224, 235);
+       
      }
      
      .qr-code{
@@ -43,6 +48,7 @@
    .attribution{
     font-size: 11px;
     text-align: center;
+    margin:auto;
     }
     
     .main-div{
@@ -83,7 +89,7 @@
 </head>
 <body>
   <div  class="main-div">
-    <img class="qr-code" src="image-qr-code.png">
+    <img class="qr-code" src="image-qr-code.png" alt="Frontend Meentor's QR Code">
     <p class="head-text">
       Improve your front-end skills by building projects
     </p>
